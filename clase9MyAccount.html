@@ -23,6 +23,7 @@
             --md: 16px;
             --lg: 18px;
         }
+
         body {
             font-family: "Quicksand", sans-serif;
             font-weight: var(--font-light);
@@ -30,8 +31,14 @@
         }
 
         @media (max-width: 640px) {
-            .logo {
-                display: block !important;
+            .form-container{
+                height: 100%;
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
 
         }
@@ -50,26 +57,13 @@
             width: 300px;
         }
         
-        .logo {
-            width: 150px;
-            justify-self: center;
-            margin-bottom: 48px;
-            display: none;
-        }
 
         .tittle {
             font-size: var(--lg);
-            text-align: center;
-            margin: 12px;
+            text-align: left;
+            margin-bottom: 36px;
         }
 
-        .subtittle {
-            font-size: var(--md);
-            font-weight: var(--font-light);
-            margin-top: 0;
-            margin-bottom: 32px;
-            color: var(--very-light-pink);
-        }
 
         .label {
             font-weight: var(--font-bold);
@@ -77,14 +71,14 @@
             margin-bottom: 4px;
         }
 
-        .input-password {
+        .input-password, .input-email, .input-name {
             background-color: var(--text-input-field);
             border-radius: 8px;
             border: none;
             height: 32px;
             font-size: var(--md);
             padding: 6px;
-            margin-bottom: 12px;
+            margin-bottom: 22px;
         }
         
         .form {
@@ -92,7 +86,12 @@
             flex-direction: column;
         }
 
-        .primary-button{
+        .form div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-button{
             background-color: var(--hospital-green);
             border-radius: 8px;
             border: none;
@@ -103,7 +102,6 @@
             width: 100%;
             margin-top: 14px;
             margin-bottom: 30px;
-            cursor: pointer;
         }
         
         
@@ -112,24 +110,28 @@
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
 
-            <h1 class="tittle">Create a new Password</h1>
-
-            <p class="subtittle">Enter a new password for your account</p>
+            <h1 class="tittle">My account</h1>
 
             <form action="/" class="form">
+                <div>
+                <label class="label" for="name">Name</label>
+                <input class="input input-name" type="text" id="name" placeholder="Aurora Fernandez">
                 
+                <label class="label" for="email">Email</label>
+                <input class="input input-email" type="text" id="email" placeholder="platzi@email.com">
+
                 <label class="label" for="password">Password</label>
                 <input class="input input-password" type="password" id="password" placeholder="********">
-            
-                <label class="label" for="new-password">Re-enter Password</label>
-                <input class="input input-password" type="password" id="new-password" placeholder="********">
 
+                </div>
+                
+                <div>
                 <input type="submit"
                 class="primary-button login-button"
                 value="Confirm new password">
-            
+
+                </div>
             </form>
             </div>
     </div>
