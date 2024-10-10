@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --very-light-pink : #c7c7c7;
+            --text-input-field : #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --white : #FFFFFF;
+            --black : #000000;
+            --dark : #232830;
+            --font-light: 300;
+            --font-regular: 400;
+            --font-bold: 700;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: "Quicksand", sans-serif;
+            font-weight: var(--font-light);
+        }
+        
+        .menu-desktop {
+            width: 100px;
+            height: auto;
+            border: 1px solid var(--very-light-pink);
+            padding: 20px 20px 0 20px;
+        }
+
+        .menu-desktop ol {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-desktop ol li {
+            text-align: end;
+        }
+
+        .menu-desktop ol li:last-child {
+            padding-top: 20px;
+            border-top: 1px solid var(--very-light-pink);
+        }
+
+        .menu-desktop ol li:last-child a {
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            font-weight: 300;
+        }
+
+        .menu-desktop ol li a {
+            text-decoration: none;
+            color: var(--black);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .menu-desktop ol li:nth-child(1), 
+        .menu-desktop ol li:nth-child(2) {
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="menu-desktop">
+        <ol>
+            <li>
+                <a href="/" class="tittle">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+            <li>
+                <a href="/">Sign out</a>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
